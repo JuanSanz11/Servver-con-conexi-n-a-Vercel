@@ -1,0 +1,27 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Solicitar Nombre e ID</title>
+</head>
+<body>
+  <h2>Obtener datos del servidor</h2>
+  <button id="fetchBtn">Solicitar</button>
+  <div id="result"></div>
+
+  <script>
+    document.getElementById("fetchBtn").addEventListener("click", async () => {
+      try {
+        const response = await fetch("/api/users");
+        const data = await response.json();
+        const resultado = data.map(user => `Nombre: ${user.name}, ID: ${user.id}`).join("<br>");
+        document.getElementById("result").innerHTML = resultado;
+      } catch (error) {
+        document.getElementById("result").innerText = "Error al obtener los datos.";
+        console.error(error);
+      }
+    });
+  </script>
+</body>
+</html>
