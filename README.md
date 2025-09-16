@@ -43,14 +43,17 @@ Content-Type: application/json
 
 🛠️ Instalación y ejecución local
 
-git clone https://github.com/tu-usuario/api-usuarios-express.git
+```
 cd api-usuarios-express
 npm install
 npm start
+```
 
 El servidor se ejecutará en http://localhost:3000
 
 🌐 Despliegue en Vercel
+
+https://servver-con-conexi-n-a-vercel.vercel.app/
 
 🧠 Autor
 Creado por Juan — São Paulo, Brasil 🇧🇷
