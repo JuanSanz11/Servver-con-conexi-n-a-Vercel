@@ -2,6 +2,9 @@
 
 Este proyecto es una API sencilla construida con **Express.js** que permite crear, obtener y actualizar usuarios mediante su `id` y `name`. Ideal para aprender sobre rutas REST, middleware y despliegue en Vercel.
 
+<img width="667" height="833" alt="Captura de Tela 2025-09-16 às 19 00 32" src="https://github.com/user-attachments/assets/5645a331-07e9-4e17-8287-3c0fef44937e" />
+<img width="674" height="827" alt="Captura de Tela 2025-09-16 às 19 00 43" src="https://github.com/user-attachments/assets/d1c2f85a-3a76-4914-89af-387c3a0b1176" />
+
 ---
 
 ## 📦 Estructura del Proyecto
