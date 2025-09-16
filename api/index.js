@@ -1,19 +1,22 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const usersRouter = require('./users');
 
 const app = express();
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// Rutas
+// Servir archivos estáticos
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Rutas API
 app.use('/api/users', usersRouter);
 
-// Ruta de prueba
+// Página principal
 app.get('/', (req, res) => {
-  res.send('Servidor funcionando correctamente');
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Puerto
