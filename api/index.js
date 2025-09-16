@@ -13,8 +13,10 @@ app.use('/api/users', usersRouter);
 
 
 // Ruta de prueba
+const path = require('path');
+
 app.get('/', (req, res) => {
-  res.send('Servidor ONLINE');
+  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
 
 // Puerto
