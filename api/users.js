@@ -25,33 +25,40 @@ router.get('/:id', (req, res) => {
 // Crear un nuevo usuario
 router.post('/', (req, res) => {
   const newUser = req.body;
-  
+
   if (!newUser.id || !newUser.name) {
     return res.status(400).json({ message: 'ID y nombre son requeridos' });
   }
-  
+
   users.push(newUser);
-  
-console.log('Usuario creado:', newUser); // Loguear la creación del usuario
-  
-res.status(201).json(newUser);
+  console.log('Usuario creado:', newUser);
+  res.status(201).json(newUser);
 });
 
 // Actualizar un usuario existente
 router.put('/:id', (req, res) => {
-console.log('Actualizando usuario con ID:', req.params.id); // Loguear la actualización
-  
-const userIndex = users.findIndex(u => u.id === req.params.id);
-  
-if (userIndex !== -1) { 
+  console.log('Actualizando usuario con ID:', req.params.id);
+
+  const userIndex = users.findIndex(u => u.id === req.params.id);
+
+  if (userIndex !== -1) {
     users[userIndex] = { ...users[userIndex], ...req.body };
-    
-console.log('Usuario actualizado:', users[userIndex]); // Loguear el resultado
-    
-res.json(users[userIndex]);
-} else { 
-    res.status(404).json({ message: 'Usuario no encontrado' }); 
-} 
+    console.log('Usuario actualizado:', users[userIndex]);
+    res.json(users[userIndex]);
+  } else {
+    res.status(404).json({ message: 'Usuario no encontrado' });
+  }
+});
+
+// Eliminar un usuario por ID
+router.delete('/:id', (req, res) => {
+  const userIndex = users.findIndex(u => u.id === req.params.id);
+  if (userIndex !== -1) {
+    const deletedUser = users.splice(userIndex, 1)[0];
+    res.json({ message: 'Usuario eliminado', user: deletedUser });
+  } else {
+    res.status(404).json({ message: 'Usuario no encontrado' });
+  }
 });
 
 module.exports = router;
