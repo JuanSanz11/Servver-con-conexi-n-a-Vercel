@@ -22,6 +22,8 @@ Este proyecto es una API sencilla construida con **Express.js** que permite crea
 
 ### ✅ Obtener todos los usuarios
 ```http
+
+🔍 Obtener usuarios general
 GET /api/users
 
 🔍 Obtener usuario por ID
