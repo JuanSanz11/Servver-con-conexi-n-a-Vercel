@@ -7,10 +7,13 @@ Este proyecto es una API sencilla construida con **Express.js** que permite crea
 ## 📦 Estructura del Proyecto
 
 📁 api/ 
-├── index.js # Archivo principal del servidor 
-├── users.js # Módulo de rutas para usuarios 
+
+── index.js # Archivo principal del servidor 
+
+── users.js # Módulo de rutas para usuarios 
 
 📄 vercel.json # Configuración para despliegue en Vercel 
+
 📄 package.json # Dependencias y scripts
 
 ---
