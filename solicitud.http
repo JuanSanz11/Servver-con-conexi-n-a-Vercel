@@ -1,0 +1,18 @@
+### Crear un nuevo usuario (POST)
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "Juan"
+}
+
+
+
+### Actualizar un usuario existente (PUT)
+PUT http://localhost:3000/api/users/1
+Content-Type: application/json
+
+{
+  "name": "carlos"
+}
