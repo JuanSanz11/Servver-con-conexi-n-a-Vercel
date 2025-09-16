@@ -1,18 +1,23 @@
-### Crear un nuevo usuario (POST)
-POST http://localhost:3000/api/users
+### Obtener todos los usuarios
+GET https://servver-con-conexi-n-a-vercel.vercel.app/api/users
+
+### Obtener usuario por ID
+GET https://servver-con-conexi-n-a-vercel.vercel.app/api/users/2
+
+
+### Crear usuario
+POST https://servver-con-conexi-n-a-vercel.vercel.app/api/users
 Content-Type: application/json
 
 {
-  "id": 3,
-  "name": "Juan"
+  "id": "3",
+  "name": "John Doe"
 }
 
-
-
-### Actualizar un usuario existente (PUT)
-PUT http://localhost:3000/api/users/1
+### Actualizar usuario
+PUT https://servver-con-conexi-n-a-vercel.vercel.app/api/users/3
 Content-Type: application/json
 
 {
-  "name": "carlos"
+  "name": "Andre"
 }
